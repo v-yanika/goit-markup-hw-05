@@ -51,7 +51,17 @@
         <section class="order">
             <div class="container">
                 <h1 class="order-title">Ефективні рішення для вашого бізнесу</h1>
-                <button class="order-button">Замовити послугу</button>
+                <button class="order-button" data-modal-open>Замовити послугу</button>
+            </div>
+            <div class="overlay is-hidden" data-modal>
+                <div class="modal"><button class="closebtn" data-modal-close>
+
+                        <svg class="close">
+                            <use href="./images/close-black.svg#close-black"> </use>
+                        </svg>
+                    </button></div>
+
+
             </div>
         </section>
 
@@ -101,9 +111,15 @@
             <div class="container">
                 <h2 class="work-title">Чим ми займаємося</h2>
                 <ul class="work-list list nopadding">
-                    <li class="work-item"><img src="./images/img1.jpg" alt="Написання структури" width="370"></li>
-                    <li class="work-item"><img src="./images/img2.jpg" alt="Розробка макета" width="370"></li>
-                    <li class="work-item"><img src="./images/img3.jpg" alt="Підбір кольорової гами" width="370"></li>
+                    <li class="work-item"><img src="./images/img1.jpg" alt="Написання структури" width="370">
+                        <h3 class="work-text">Десктопні додатки</h3>
+                    </li>
+                    <li class="work-item"><img src="./images/img2.jpg" alt="Розробка макета" width="370">
+                        <h3 class="work-text">Мобільні додатки</h3>
+                    </li>
+                    <li class="work-item"><img src="./images/img3.jpg" alt="Підбір кольорової гами" width="370">
+                        <h3 class="work-text">Дизайнерські рішення</h3>
+                    </li>
                 </ul>
             </div>
         </section>
@@ -283,6 +299,7 @@
         </div>
 
     </footer>
+    <script src="./js/modal.js"> </script>
 </body>
 
 </html>
