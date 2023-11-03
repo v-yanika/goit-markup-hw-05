@@ -424,63 +424,58 @@ img {
     margin-left: 30px;
 }
 
-.card-link:hover .text .text::before,
-.card-link:focus .text .text::before {
-    border: 1px solid #EEE;
-    background: #FFF;
-    box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16), 0px 4px 4px 0px rgba(0, 0, 0, 0.06), 0px 1px 1px 0px rgba(0, 0, 0, 0.12);
-    opacity: 1;
-}
-
-/* .text::before:hover {
-    opacity: 1;
-} */
-
-.desc-text {
-    /* position: absolute;
+.card-link {
     display: flex;
     flex-wrap: wrap;
-    min-width: 370px;
-    height: 295px; */
-    position: relative;
+    width: 370px;
+    text-decoration: none;
     overflow: hidden;
-
-    /* transform: translateY(100%);
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-    background-color: rgba(33, 150, 243, 0.90); */
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.card-link:hover,
+.card-link:focus {
+    border: 1px solid #EEE;
+    background-color: var(--accent-text-color);
+    box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16), 0px 4px 4px 0px rgba(0, 0, 0, 0.06), 0px 1px 1px 0px rgba(0, 0, 0, 0.12);
 
-/* .desc-text:hover,
-.desc-text:focus {
-    opacity: 1;
-    transform: translateY(0);
+}
 
-} */
+.desc-text {
+    position: relative;
+}
 
-.text::before {
+.desc-text::before {
     content: '';
-    /* position: absolute; */
+    position: absolute;
     width: 100%;
     height: 100%;
-    /* transform: translateY(100%);
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1); */
     opacity: 0;
     background-color: rgba(33, 150, 243, 0.90);
+    transform: translateY(100%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 }
+
+
+.card-link:hover .desc-text::before,
+.card-link:focus .desc-text::before {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
 
 .text {
     position: absolute;
-    /* left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%); */
+    left: 24px;
+    top: 63px;
+    width: 322px;
     opacity: 0;
     transform: translateY(100%);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    padding: 63px 24px;
-    width: 322px;
+
     color: var(--accent-text-color);
     font-size: 18px;
     font-style: normal;
@@ -489,7 +484,14 @@ img {
     letter-spacing: 0.54px;
 }
 
+.card-link:hover .text,
+.card-link:focus .text {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 .card-content {
+
     width: 370px;
     padding: 20px 20px;
     border: 1px solid #EEE;
@@ -513,14 +515,6 @@ img {
     margin-bottom: 4px;
 }
 
-.card-link {
-    display: flex;
-    flex-wrap: wrap;
-    width: 370px;
-    text-decoration: none;
-    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-}
 
 .card-sub {
     font-size: 16px;
