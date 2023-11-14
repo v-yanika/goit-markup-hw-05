@@ -387,7 +387,7 @@ img {
     background: #F5F4FA;
     font-style: normal;
 
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 
@@ -429,21 +429,21 @@ img {
     flex-wrap: wrap;
     width: 370px;
     text-decoration: none;
-    overflow: hidden;
-    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
-        opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid #EEE;
+    background-color: var(--accent-text-color);
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .card-link:hover,
 .card-link:focus {
-    border: 1px solid #EEE;
-    background-color: var(--accent-text-color);
+
     box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16), 0px 4px 4px 0px rgba(0, 0, 0, 0.06), 0px 1px 1px 0px rgba(0, 0, 0, 0.12);
 
 }
 
 .desc-text {
     position: relative;
+    overflow: hidden;
 }
 
 .desc-text::before {
@@ -725,7 +725,7 @@ img {
     height: 100%;
     opacity: 1;
     background-color: rgba(0, 0, 0, 0.20);
-
+    transform: scaleZ(1);
 
 }
 
@@ -735,6 +735,10 @@ img {
     visibility: hidden;
 }
 
+.overlay.is-hidden.modal {
+    transform: translate(-50%, -50%) scale(0.7);
+}
+
 .modal {
     display: block;
     position: absolute;
@@ -742,11 +746,12 @@ img {
     height: 580px;
     left: 50%;
     top: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) scale(1);
 
     background-color: var(--accent-text-color);
     border-radius: 4px;
     box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.20), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .closebtn {
