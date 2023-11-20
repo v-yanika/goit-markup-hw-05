@@ -725,18 +725,18 @@ img {
     height: 100%;
     opacity: 1;
     background-color: rgba(0, 0, 0, 0.20);
-    transform: scaleZ(1);
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 
 .overlay.is-hidden {
     opacity: 0;
     pointer-events: none;
-    visibility: hidden;
+
 }
 
 .overlay.is-hidden.modal {
-    transform: translate(-50%, -50%) scale(0.7);
+    transform: translate(-50%, -50%) scale(0.6);
 }
 
 .modal {
